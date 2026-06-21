@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en" style="font-size: 16px;">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Game Details</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #1F2124;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .tabs-382028-0-0 {
+            background-color: red;
+        }
+
+        .game-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #1D1E23;
+            padding: 20px;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+
+        .social-bar {
+            background-color: #1D1E23;
+            margin-top: 2rem;
+            height: 200px;
+        }
+
+        .game-title-container {
+            flex: 1;
+            margin-left: 2rem;
+        }
+
+        .game-title {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin: 0;
+        }
+
+        .game-banner {
+            max-width: 200px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .game-content {
+            background-color: #1D1E23;
+            padding: 20px;
+            margin-top: 2rem;
+        }
+
+        .game-content h5 {
+            color: #4CAF50;
+            font-size: 1.5rem;
+        }
+
+        .game-content p,
+        .game-content ul,
+        .game-content li {
+            color: #ccc;
+        }
+
+        .game-content a {
+            color: #4CAF50;
+            text-decoration: none;
+        }
+
+        .game-content a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .game-header {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .game-title {
+                text-align: center;
+                font-size: 2rem;
+            }
+
+            .game-banner {
+                margin-top: 10px;
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="game-header">
+            <div class="game-title-container">
+                <h1 id="game-title" class="game-title"></h1>
+                <div id="game-meta" class="game-meta"></div>
+            </div>
+            <img id="game-banner" class="game-banner" src="" alt="Game Banner">
+        </div>
+        <div class="social-bar" style="display: flex; align-items: center; padding: 0rem; position: relative;">
+            <div style="position: relative; width: 100px;  margin-right: 1rem;">
+                <img src="assets/circle.png" alt="Background Image" style="height: 200px;">
+                <img src="assets/phone.webp" alt="Foreground Image"
+                    style="position: absolute; top: 0; left: 50px; height: 150px; margin-top: 20px;">
+            </div>
+            <div style="color: white; font-family: Arial, sans-serif; margin-left: 8rem;">
+                <h2 style="color: #d9dad9; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Stay Updated</h2>
+                <p style="color: #D3D3D3;">Join our social media community to get the latest updates on new games and
+                    exclusive free perks!</p>
+                <p style="color: #D3D3D3;">Follow us to be the first to know about special offers, events, and more.
+                    Don’t miss out on the opportunity to enhance your gaming experience with our latest news and
+                    rewards.</p>
+            </div>
+
+        </div>
+
+
+        <div id="game-content" class="game-content"></div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const urlParams = new URLSearchParams(window.location.search);
+            const gameName = urlParams.get('name');
+
+            if (gameName) {
+                fetch(`/scrape-repack-details?name=${encodeURIComponent(gameName)}`)
+                    .then(response => {
+                        if (!response.ok) {
+                            throw new Error(`Hey! Looks like we haven't fully added this game yet. Come back in a little bit.`);
+                        }
+                        return response.json();
+                    })
+                    .then(data => {
+                        if (data.error) {
+                            throw new Error(data.error);
+                        }
+                        document.getElementById('game-banner').src = data.banner;
+                        document.getElementById('game-title').innerText = data.title;
+                        document.getElementById('game-meta').innerHTML = `
+                            <p>Genre: ${data.genre}</p>
+                            <p>Release Date: ${data.releaseDate}</p>
+                        `;
+                        document.getElementById('game-content').innerHTML = data.content;
+
+                        // Modify the content text dynamically
+                        document.querySelectorAll('.game-content p').forEach(paragraph => {
+                            if (paragraph.innerText.includes('Support the software developers')) {
+                                paragraph.style.color = '#FFD700'; // Change the color to gold
+                            }
+                        });
+
+                    })
+                    .catch(error => {
+                        document.getElementById('game-title').innerText = 'Error Loading Game!';
+                        document.getElementById('game-content').innerText = error.message;
+                        console.error('Error fetching game details:', error);
+                    });
+            } else {
+                document.getElementById('game-title').innerText = 'No game specified';
+                document.getElementById('game-content').innerText = 'Please provide a game name in the URL query parameters.';
+            }
+        });
+    </script>
+</body>
+
+</html>

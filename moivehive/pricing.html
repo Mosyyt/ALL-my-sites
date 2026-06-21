@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MovieHive | Ad Free Movies</title>
+  <link rel="shortcut icon" href="./ks.png" type="image/svg+xml">
+
+  <!-- 
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <!-- 
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body id="top" class="bodytop">
+
+  <header class="header" data-header>
+    <div class="container">
+
+      <div class="overlay" data-overlay></div>
+
+      <a href="./index.html" class="logo">
+        <div class="display">
+          <img class="title" src="ks.png">
+        </div>
+      </a>
+
+      <div class="header-actions">
+
+        <button class="search-btn">
+          <ion-icon name="search-outline"></ion-icon>
+        </button>
+
+        <div class="lang-wrapper">
+          <label for="language">
+            <ion-icon name="globe-outline"></ion-icon>
+          </label>
+
+          <select name="language" id="language">
+            <option value="en">EN</option>
+          
+          </select>
+        </div>
+
+        <button class="btn btn-primary">Sign in</button>
+
+      </div>
+
+      <button class="menu-open-btn" data-menu-open-btn>
+        <ion-icon name="reorder-two"></ion-icon>
+      </button>
+
+      <nav class="navbar" data-navbar>
+
+        <div class="navbar-top">
+
+          <a href="./index.html" class="logo">
+            <img src="./assets/images/logo.svg" alt="Filmlane logo">
+          </a>
+
+          <button class="menu-close-btn" data-menu-close-btn>
+            <ion-icon name="close-outline"></ion-icon>
+          </button>
+
+        </div>
+
+        <ul class="navbar-list">
+
+          <li>
+            <a href="./index.html" class="navbar-link">Home</a>
+          </li>
+
+          <li>
+            <a href="#" class="navbar-link">Movie</a>
+          </li>
+
+          <li>
+            <a href="#" class="navbar-link">Tv Show</a>
+          </li>
+
+          <li>
+            <a href="#" class="navbar-link">Web Series</a>
+          </li>
+
+          <li>
+            <a href="#" class="navbar-link">Pricing</a>
+          </li>
+
+        </ul>
+
+        <ul class="navbar-social-list">
+
+          <li>
+            <a href="#" class="navbar-social-link">
+              <ion-icon name="logo-twitter"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="navbar-social-link">
+              <ion-icon name="logo-facebook"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="navbar-social-link">
+              <ion-icon name="logo-pinterest"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="navbar-social-link">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="navbar-social-link">
+              <ion-icon name="logo-youtube"></ion-icon>
+            </a>
+          </li>
+
+        </ul>
+
+      </nav>
+
+    </div>
+  </header>
+
+
+
+
+
+  <main>
+    <article>
+
+      <!-- 
+        - #HERO
+      -->
+
+      
+
+
+
+
+
+      <!-- 
+        - #UPCOMING
+      -->
+
+      <section class="upcoming">
+        <div class="container">
+
+          <div class="flex-wrapper">
+
+            <div class="title-wrapper">
+              <p class="section-subtitle">MovieHive</p>
+
+              <h2 class="h2 section-title">Popular Movies</h2>
+            </div>
+
+            <ul class="filter-list">
+
+              <li>
+                <button class="filter-btn">Movies</button>
+              </li>
+
+              <li>
+                <button class="filter-btn">TV Shows</button>
+              </li>
+
+              <li>
+                <button class="filter-btn">Anime</button>
+              </li>
+
+            </ul>
+
+          </div>
+
+          <ul class="movies-list  has-scrollbar">
+
+            <li>
+              <div class="movie-card">
+
+                <a href="./movie-details.html">
+                  <figure class="card-banner">
+                    <img src="./assets/images/upcoming-1.png" alt="The Northman movie poster">
+                  </figure>
+                </a>
+
+                <div class="title-wrapper">
+                  <a href="./movie-details.html">
+                    <h3 class="card-title">The Northman</h3>
+                  </a>
+
+                  <time datetime="2022">2022</time>
+                </div>
+
+                <div class="card-meta">
+                  <div class="badge badge-outline">HD</div>
+
+                  <div class="duration">
+                    <ion-icon name="time-outline"></ion-icon>
+
+                    <time datetime="PT137M">137 min</time>
+                  </div>
+
+                  <div class="rating">
+                    <ion-icon name="star"></ion-icon>
+
+                    <data>8.5</data>
+                  </div>
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="movie-card">
+
+                <a href="./movie-details.html">
+                  <figure class="card-banner">
+                    <img src="./assets/images/cocainebear.jpg"
+                      alt="Doctor Strange in the Multiverse of Madness movie poster">
+                  </figure>
+                </a>
+
+                <div class="title-wrapper">
+                  <a href="./movie-details.html">
+                    <h3 class="card-title">Cocaine Bear</h3>
+                  </a>
+
+                  <time datetime="2022">2022</time>
+                </div>
+
+                <div class="card-meta">
+                  <div class="badge badge-outline">HD</div>
+
+                  <div class="duration">
+                    <ion-icon name="time-outline"></ion-icon>
+
+                    <time datetime="PT126M">95 min</time>
+                  </div>
+
+                  <div class="rating">
+                    <ion-icon name="star"></ion-icon>
+
+                    <data>6.3</data>
+                  </div>
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="movie-card">
+
+                <a href="./movie-details.html">
+                  <figure class="card-banner">
+                    <img src="./assets/images/scream.jpg" alt="Memory movie poster">
+                  </figure>
+                </a>
+
+                <div class="title-wrapper">
+                  <a href="./movie-details.html">
+                    <h3 class="card-title">Scream</h3>
+                  </a>
+
+                  <time datetime="2022">2023</time>
+                </div>
+
+                <div class="card-meta">
+                  <div class="badge badge-outline">HD</div>
+
+                  <div class="duration">
+                    <ion-icon name="time-outline"></ion-icon>
+
+                    <time datetime="">122</time>
+                  </div>
+
+                  <div class="rating">
+                    <ion-icon name="star"></ion-icon>
+
+                    <data>7.3</data>
+                  </div>
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="movie-card">
+
+                <a href="./movie-details.html">
+                  <figure class="card-banner">
+                    <img src="./assets/images/65.jpg"
+                      alt="The Unbearable Weight of Massive Talent movie poster">
+                  </figure>
+                </a>
+
+                <div class="title-wrapper">
+                  <a href="./movie-details.html">
+                    <h3 class="card-title">65</h3>
+                  </a>
+
+                  <time datetime="2022">2023</time>
+                </div>
+
+                <div class="card-meta">
+                  <div class="badge badge-outline">HD</div>
+
+                  <div class="duration">
+                    <ion-icon name="time-outline"></ion-icon>
+
+                    <time datetime="PT107M">93 min</time>
+                  </div>
+
+                  <div class="rating">
+                    <ion-icon name="star"></ion-icon>
+
+                    <data>5.7</data>
+                  </div>
+                </div>
+
+              </div>
+            </li>
+
+          </ul>
+
+        </div>
+        <div class="search-container">
+          <div class="title">
+            <img src="images/ks.png">
+          </div>
+          <input type="search" id="search-input" placeholder="Enter Keywords...">
+          <button id="search-button"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </div>
+        <center>
+          <div id="video" class="video">
+            <iframe id="iframe" src="" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+            <p style="color: rgb(79, 221, 221); font-weight: 500;">In case of any Error or Too Much Buffering click again on
+              your Movie poster down below or just change the Server from the left corner in video player. </p>
+            <!-- Go to www.addthis.com/dashboard to customize your tools -->
+      
+            <div id="webSeriesData"></div>
+          </div>
+        </center>
+      </section>
+
+
+    </article>
+  </main>
+
+
+
+
+
+  <!-- 
+    - #FOOTER
+  -->
+
+  <footer class="footer">
+
+    
+
+    <div class="footer-bottom">
+      <div class="container">
+
+        <p class="copyright">
+          &copy; 2022 <a href="#">codewithsadee</a>. All Rights Reserved
+        </p>
+
+        <img src="./assets/images/footer-bottom-img.png" alt="Online banking companies logo" class="footer-bottom-img">
+
+      </div>
+    </div>
+
+  </footer>
+
+
+
+
+
+  <!-- 
+    - #GO TO TOP
+  -->
+
+  <a href="#top" class="go-top" data-go-top>
+    <ion-icon name="chevron-up"></ion-icon>
+  </a>
+
+
+
+
+
+  <!-- 
+    - custom js link
+  -->
+  <script src="./assets/js/script.js"></script>
+
+  <!-- 
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>

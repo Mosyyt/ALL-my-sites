@@ -1,0 +1,183 @@
+var y = Object.defineProperty;
+var E = Object.getOwnPropertySymbols;
+var v = Object.prototype.hasOwnProperty,
+    w = Object.prototype.propertyIsEnumerable;
+var x = (i, a, t) => a in i ? y(i, a, {
+        enumerable: !0,
+        configurable: !0,
+        writable: !0,
+        value: t
+    }) : i[a] = t,
+    g = (i, a) => {
+        for (var t in a || (a = {})) v.call(a, t) && x(i, t, a[t]);
+        if (E)
+            for (var t of E(a)) w.call(a, t) && x(i, t, a[t]);
+        return i
+    };
+import {
+    H as b,
+    d as m,
+    y as F,
+    x as l,
+    z as H,
+    o as r,
+    b as j,
+    q as z,
+    A as B,
+    k as N,
+    I as S,
+    F as k,
+    E as U
+} from "./chunk-c23b3c52.js";
+import {
+    _ as e
+} from "./chunk-cf010ec4.js";
+(async () => {
+    const i = {},
+        a = {},
+        t = {},
+        c = {},
+        R = [],
+        L = {},
+        I = Object.assign({
+            "/pages/affiliate/index.page.tsx": () => e(() =>
+                import ("./pages/affiliate/index.page.2d202fc4.js"), ["assets/pages/affiliate/index.page.2d202fc4.js", "assets/chunk-a4af42e8.js", "assets/chunk-73e80d68.js", "assets/chunk-7459b96e.js", "assets/chunk-654ef298.js", "assets/chunk-cf010ec4.js"]),
+            "/pages/app_download/index.page.tsx": () => e(() =>
+                import ("./pages/app_download/index.page.f8e8ac17.js"), ["assets/pages/app_download/index.page.f8e8ac17.js", "assets/chunk-a4af42e8.js", "assets/chunk-73e80d68.js", "assets/chunk-b53b00e3.js", "assets/chunk-cf010ec4.js", "assets/chunk-6d8ed563.js", "assets/chunk-5bcb444f.js", "assets/GroupPageLayout.6f234913.css", "assets/chunk-7459b96e.js", "assets/index.page.d0373635.css"]),
+            "/pages/auth/index.page.tsx": () => e(() =>
+                import ("./pages/auth/index.page.a1848e64.js"), ["assets/pages/auth/index.page.a1848e64.js", "assets/chunk-a4af42e8.js", "assets/chunk-73e80d68.js", "assets/chunk-b53b00e3.js", "assets/chunk-cf010ec4.js", "assets/chunk-654ef298.js"]),
+            "/pages/bc_debug.page.tsx": () => e(() =>
+                import ("./pages/bc_debug.page.3089502d.js"), ["assets/pages/bc_debug.page.3089502d.js", "assets/chunk-a4af42e8.js", "assets/chunk-73e80d68.js", "assets/chunk-b53b00e3.js", "assets/chunk-cf010ec4.js", "assets/bc_debug.page.d23af930.css"]),
+            "/pages/bingolist/index.page.tsx": () => e(() =>
+                import ("./pages/bingolist/index.page.38aa7de6.js"), ["assets/pages/bingolist/index.page.38aa7de6.js", "assets/chunk-a4af42e8.js", "assets/chunk-73e80d68.js", "assets/chunk-5bcb444f.js", "assets/chunk-b53b00e3.js", "assets/chunk-cf010ec4.js", "assets/chunk-a21360ec.js", "assets/chunk-78c5b721.js", "assets/chunk-0e835458.js", "assets/GameList.30b187ac.css", "assets/chunk-19b7f447.js", "assets/chunk-421da83a.js", "assets/GridScrollList.65d17988.css", "assets/GameRecommend.b27d187b.css", "assets/chunk-47df8c47.js", "assets/chunk-2d134749.js", "assets/chunk-07977b38.js", "assets/chunk-0e1ef679.js", "assets/index.page.439c4357.css"]),
+            "/pages/bonus/index.page.tsx": () => e(() =>
+                import ("./pages/bonus/index.page.a9224c22.js"), ["assets/pages/bonus/index.page.a9224c22.js", "assets/chunk-a4af42e8.js", "assets/chunk-73e80d68.js", "assets/chunk-b53b00e3.js", "assets/chunk-cf010ec4.js", "assets/chunk-7459b96e.js", "assets/chunk-1371f12f.js", "assets/chunk-654ef298.js"]),
+            "/pages/casino/index.page.tsx": () => e(() =>
+                import ("./pages/casino/index.page.225730ae.js"), ["assets/pages/casino/index.page.225730ae.js", "assets/chunk-a4af42e8.js", "assets/chunk-73e80d68.js", "assets/chunk-b53b00e3.js", "assets/chunk-cf010ec4.js", "assets/chunk-394d30c6.js", "assets/chunk-07977b38.js", "assets/chunk-0e835458.js", "assets/chunk-0e1ef679.js", "assets/chunk-5bcb444f.js", "assets/chunk-a21360ec.js", "assets/chunk-78c5b721.js", "assets/GameList.30b187ac.css", "assets/chunk-19b7f447.js", "assets/chunk-421da83a.js", "assets/GridScrollList.65d17988.css", "assets/GameRecommend.b27d187b.css", "assets/chunk-8888a3c4.js", "assets/index.b6401c0d.css", "assets/chunk-cc8c19f6.js", "assets/chunk-f9d60830.js", "assets/chunk-47df8c47.js", "assets/chunk-3dc03e47.js", "assets/HighRollers.c708b407.css", "assets/chunk-661881bd.js", "assets/index.8c347120.css", "assets/chunk-3e48406a.js", "assets/chunk-420c54b8.js", "assets/GameNavPath.e1cc4a4a.css", "assets/index.5fdfe620.css", "assets/chunk-1d6a2d71.js", "assets/index.659f9969.css", "assets/chunk-000ed202.js", "assets/SearchWrap.82780ba6.css", "assets/chunk-2d134749.js", "assets/chunk-7459b96e.js", "assets/index.page.f41200a6.css"]),
+            "/pages/chat/index.page.tsx": () => e(() =>
+                import ("./pages/chat/index.page.81bed0a8.js"), ["assets/pages/chat/index.page.81bed0a8.js", "assets/chunk-a4af42e8.js", "assets/chunk-73e80d68.js", "assets/chunk-b53b00e3.js", "assets/chunk-cf010ec4.js", "assets/chunk-b894b9de.js", "assets/chunk-5bcb444f.js", "assets/chunk-357b411e.js", "assets/chunk-27d137a6.js", "assets/MatchIcon.8462f48e.css", "assets/chunk-03c302ce.js", "assets/chunk-0e1ef679.js", "assets/chunk-5fced113.js", "assets/chunk-0e835458.js", "assets/chunk-654ef298.js", "assets/chunk-35f3c0e2.js", "assets/chunk-c23b3c52.js", "assets/chunk-e570733e.js", "assets/chunk-68de7933.js", "assets/chunk-07977b38.js", "assets/chunk-47df8c47.js", "assets/chunk-3dc03e47.js", "assets/chunk-e20af49b.js", "assets/chunk-6e6e4b85.js", "assets/Emoji.5e52f519.css", "assets/chunk-b8efc996.js", "assets/chunk-000ed202.js", "assets/SearchWrap.82780ba6.css", "assets/chunk-78c5b721.js", "assets/GameList.30b187ac.css", "assets/index.8e819340.css", "assets/index.page.b63a7c5c.css"]),
+            "/pages/events/index.page.tsx": () => e(() =>
+                import ("./pages/events/index.page.6b90625d.js"), ["assets/pages/events/index.page.6b90625d.js", "assets/chunk-a4af42e8.js", "assets/chunk-73e80d68.js", "assets/chunk-b53b00e3.js", "assets/chunk-cf010ec4.js", "assets/chunk-b894b9de.js", "assets/chunk-5bcb444f.js", "assets/chunk-357b411e.js", "assets/chunk-27d137a6.js", "assets/MatchIcon.8462f48e.css", "assets/chunk-03c302ce.js", "assets/chunk-0e1ef679.js", "assets/chunk-5fced113.js", "assets/chunk-0e835458.js", "assets/chunk-654ef298.js", "assets/chunk-35f3c0e2.js", "assets/chunk-c23b3c52.js", "assets/chunk-e570733e.js", "assets/chunk-68de7933.js", "assets/chunk-07977b38.js", "assets/chunk-47df8c47.js", "assets/chunk-3dc03e47.js", "assets/chunk-e20af49b.js", "assets/chunk-6e6e4b85.js", "assets/Emoji.5e52f519.css", "assets/chunk-b8efc996.js", "assets/chunk-000ed202.js", "assets/SearchWrap.82780ba6.css", "assets/chunk-78c5b721.js", "assets/GameList.30b187ac.css", "assets/index.8e819340.css"]),
+            "/pages/favorite/index.page.tsx": () => e(() =>
+                import ("./pages/favorite/index.page.d99b966f.js"), ["assets/pages/favorite/index.page.d99b966f.js", "assets/chunk-a4af42e8.js", "assets/chunk-73e80d68.js", "assets/chunk-19b7f447.js", "assets/chunk-7ea34fc4.js", "assets/chunk-b53b00e3.js", "assets/chunk-cf010ec4.js", "assets/chunk-78c5b721.js", "assets/chunk-5bcb444f.js", "assets/chunk-0e835458.js", "assets/GameList.30b187ac.css", "assets/chunk-420c54b8.js", "assets/GameNavPath.e1cc4a4a.css", "assets/chunk-a21360ec.js", "assets/chunk-421da83a.js", "assets/GridScrollList.65d17988.css", "assets/GameRecommend.b27d187b.css", "assets/index.405e4894.css", "assets/chunk-2d134749.js", "assets/chunk-07977b38.js", "assets/chunk-0e1ef679.js"]),
+            "/pages/forum_event/index.page.tsx": () => e(() =>
+                import ("./pages/forum_event/index.page.40b6a752.js"), ["assets/pages/forum_event/index.page.40b6a752.js", "assets/chunk-a4af42e8.js", "assets/chunk-73e80d68.js", "assets/chunk-b894b9de.js", "assets/chunk-b53b00e3.js", "assets/chunk-cf010ec4.js", "assets/chunk-5bcb444f.js", "assets/chunk-357b411e.js", "assets/chunk-27d137a6.js", "assets/MatchIcon.8462f48e.css", "assets/chunk-03c302ce.js", "assets/chunk-0e1ef679.js", "assets/chunk-5fced113.js", "assets/chunk-0e835458.js", "assets/chunk-654ef298.js", "assets/chunk-35f3c0e2.js", "assets/chunk-c23b3c52.js", "assets/chunk-e570733e.js", "assets/chunk-68de7933.js", "assets/chunk-07977b38.js", "assets/chunk-47df8c47.js", "assets/chunk-3dc03e47.js", "assets/chunk-e20af49b.js", "assets/chunk-6e6e4b85.js", "assets/Emoji.5e52f519.css", "assets/chunk-b8efc996.js", "assets/chunk-000ed202.js", "assets/SearchWrap.82780ba6.css", "assets/chunk-78c5b721.js", "assets/GameList.30b187ac.css", "assets/index.8e819340.css", "assets/index.page.1e47e7dc.css"]),
+            "/pages/game/@gameUnique/index.page.tsx": () => e(() =>
+                import ("./pages/game/@gameUnique/index.page.d6fe3555.js").then(async _ => (await _.__tla, _)), ["assets/pages/game/@gameUnique/index.page.d6fe3555.js", "assets/chunk-a4af42e8.js", "assets/chunk-73e80d68.js", "assets/chunk-b53b00e3.js", "assets/chunk-cf010ec4.js", "assets/chunk-5bcb444f.js", "assets/chunk-a21360ec.js", "assets/chunk-78c5b721.js", "assets/chunk-0e835458.js", "assets/GameList.30b187ac.css", "assets/chunk-19b7f447.js", "assets/chunk-421da83a.js", "assets/GridScrollList.65d17988.css", "assets/GameRecommend.b27d187b.css", "assets/chunk-1d6a2d71.js", "assets/chunk-394d30c6.js", "assets/chunk-07977b38.js", "assets/chunk-0e1ef679.js", "assets/chunk-420c54b8.js", "assets/GameNavPath.e1cc4a4a.css", "assets/index.659f9969.css", "assets/chunk-21fa96d0.js", "assets/chunk-654ef298.js", "assets/chunk-6e6e4b85.js", "assets/Emoji.5e52f519.css", "assets/PostComment.9afc074a.css", "assets/chunk-6d77236a.js", "assets/ReplyPop.78b08cc2.css", "assets/chunk-e20af49b.js", "assets/chunk-2d134749.js", "assets/chunk-661881bd.js", "assets/chunk-f9d60830.js", "assets/chunk-47df8c47.js", "assets/chunk-3dc03e47.js", "assets/HighRollers.c708b407.css", "assets/index.page.db10e9aa.css"]),
+            "/pages/gamelist/@sectionId/index.page.tsx": () => e(() =>
+                import ("./pages/gamelist/@sectionId/index.page.93672264.js"), ["assets/pages/gamelist/@sectionId/index.page.93672264.js", "assets/chunk-a4af42e8.js", "assets/chunk-73e80d68.js", "assets/chunk-d4fa1232.js", "assets/chunk-b53b00e3.js", "assets/chunk-cf010ec4.js", "assets/chunk-5bcb444f.js", "assets/chunk-78c5b721.js", "assets/chunk-0e835458.js", "assets/GameList.30b187ac.css", "assets/chunk-19b7f447.js", "assets/chunk-8888a3c4.js", "assets/index.b6401c0d.css", "assets/chunk-5fced113.js", "assets/chunk-420c54b8.js", "assets/GameNavPath.e1cc4a4a.css", "assets/index.619a963f.css", "assets/chunk-2d134749.js", "assets/chunk-07977b38.js", "assets/chunk-0e1ef679.js", "assets/chunk-7459b96e.js"]),
+            "/pages/games-for-bonus/index.page.tsx": () => e(() =>
+                import ("./pages/games-for-bonus/index.page.ca7d938f.js"), ["assets/pages/games-for-bonus/index.page.ca7d938f.js", "assets/chunk-a4af42e8.js", "assets/chunk-73e80d68.js", "assets/chunk-78c5b721.js", "assets/chunk-b53b00e3.js", "assets/chunk-cf010ec4.js", "assets/chunk-5bcb444f.js", "assets/chunk-0e835458.js", "assets/GameList.30b187ac.css", "assets/index.page.3a331d1b.css"]),
+            "/pages/help/index.page.tsx": () => e(() =>
+                import ("./pages/help/index.page.a21ea3c9.js"), ["assets/pages/help/index.page.a21ea3c9.js", "assets/chunk-a4af42e8.js", "assets/chunk-73e80d68.js", "assets/chunk-b53b00e3.js", "assets/chunk-cf010ec4.js", "assets/chunk-7459b96e.js", "assets/chunk-654ef298.js", "assets/chunk-6d8ed563.js", "assets/chunk-5bcb444f.js", "assets/GroupPageLayout.6f234913.css"]),
+            "/pages/index/index.page.tsx": () => e(() =>
+                import ("./pages/index/index.page.155677be.js").then(async _ => (await _.__tla, _)), ["assets/pages/index/index.page.155677be.js", "assets/chunk-a4af42e8.js", "assets/chunk-73e80d68.js", "assets/chunk-b53b00e3.js", "assets/chunk-cf010ec4.js", "assets/chunk-5bcb444f.js", "assets/chunk-cc8c19f6.js", "assets/chunk-f9d60830.js", "assets/chunk-47df8c47.js", "assets/chunk-3dc03e47.js", "assets/HighRollers.c708b407.css", "assets/chunk-661881bd.js", "assets/index.8c347120.css", "assets/chunk-07977b38.js", "assets/chunk-0e835458.js", "assets/chunk-0e1ef679.js", "assets/chunk-357b411e.js", "assets/chunk-27d137a6.js", "assets/MatchIcon.8462f48e.css", "assets/chunk-a21360ec.js", "assets/chunk-78c5b721.js", "assets/GameList.30b187ac.css", "assets/chunk-19b7f447.js", "assets/chunk-421da83a.js", "assets/GridScrollList.65d17988.css", "assets/GameRecommend.b27d187b.css", "assets/chunk-bad13a2b.js", "assets/chunk-2d134749.js", "assets/chunk-7459b96e.js", "assets/index.page.0ff2b3f0.css"]),
+            "/pages/japarot/index.page.tsx": () => e(() =>
+                import ("./pages/japarot/index.page.93ea630e.js"), ["assets/pages/japarot/index.page.93ea630e.js", "assets/chunk-a4af42e8.js", "assets/chunk-73e80d68.js", "assets/chunk-654ef298.js", "assets/chunk-cf010ec4.js"]),
+            "/pages/landing/index.page.tsx": () => e(() =>
+                import ("./pages/landing/index.page.4dacdf2e.js"), ["assets/pages/landing/index.page.4dacdf2e.js", "assets/chunk-a4af42e8.js", "assets/chunk-73e80d68.js", "assets/chunk-b53b00e3.js", "assets/chunk-cf010ec4.js", "assets/chunk-b894b9de.js", "assets/chunk-5bcb444f.js", "assets/chunk-357b411e.js", "assets/chunk-27d137a6.js", "assets/MatchIcon.8462f48e.css", "assets/chunk-03c302ce.js", "assets/chunk-0e1ef679.js", "assets/chunk-5fced113.js", "assets/chunk-0e835458.js", "assets/chunk-654ef298.js", "assets/chunk-35f3c0e2.js", "assets/chunk-c23b3c52.js", "assets/chunk-e570733e.js", "assets/chunk-68de7933.js", "assets/chunk-07977b38.js", "assets/chunk-47df8c47.js", "assets/chunk-3dc03e47.js", "assets/chunk-e20af49b.js", "assets/chunk-6e6e4b85.js", "assets/Emoji.5e52f519.css", "assets/chunk-b8efc996.js", "assets/chunk-000ed202.js", "assets/SearchWrap.82780ba6.css", "assets/chunk-78c5b721.js", "assets/GameList.30b187ac.css", "assets/index.8e819340.css"]),
+            "/pages/lottery/index.page.tsx": () => e(() =>
+                import ("./pages/lottery/index.page.797acb66.js"), ["assets/pages/lottery/index.page.797acb66.js", "assets/chunk-a4af42e8.js", "assets/chunk-73e80d68.js", "assets/chunk-b53b00e3.js", "assets/chunk-cf010ec4.js", "assets/chunk-7459b96e.js", "assets/chunk-654ef298.js"]),
+            "/pages/promotion/@detailId/index.page.tsx": () => e(() =>
+                import ("./pages/promotion/@detailId/index.page.65199d43.js"), ["assets/pages/promotion/@detailId/index.page.65199d43.js", "assets/chunk-a4af42e8.js", "assets/chunk-73e80d68.js", "assets/chunk-b53b00e3.js", "assets/chunk-cf010ec4.js", "assets/chunk-2d134749.js", "assets/chunk-07977b38.js", "assets/chunk-0e835458.js", "assets/chunk-0e1ef679.js", "assets/chunk-654ef298.js"]),
+            "/pages/promotion/index.page.tsx": () => e(() =>
+                import ("./pages/promotion/index.page.212e1e34.js"), ["assets/pages/promotion/index.page.212e1e34.js", "assets/chunk-a4af42e8.js", "assets/chunk-73e80d68.js", "assets/chunk-b53b00e3.js", "assets/chunk-cf010ec4.js", "assets/chunk-2d134749.js", "assets/chunk-07977b38.js", "assets/chunk-0e835458.js", "assets/chunk-0e1ef679.js", "assets/chunk-7459b96e.js", "assets/chunk-654ef298.js"]),
+            "/pages/promotions/index.page.tsx": () => e(() =>
+                import ("./pages/promotions/index.page.ff33dc35.js"), ["assets/pages/promotions/index.page.ff33dc35.js", "assets/chunk-a4af42e8.js", "assets/chunk-73e80d68.js", "assets/chunk-b53b00e3.js", "assets/chunk-cf010ec4.js", "assets/chunk-5bcb444f.js", "assets/chunk-661881bd.js", "assets/chunk-f0854543.js", "assets/index.page.5f8d04eb.css"]),
+            "/pages/provider/@providerName/index.page.tsx": () => e(() =>
+                import ("./pages/provider/@providerName/index.page.306be89b.js"), ["assets/pages/provider/@providerName/index.page.306be89b.js", "assets/chunk-a4af42e8.js", "assets/chunk-73e80d68.js", "assets/chunk-b53b00e3.js", "assets/chunk-cf010ec4.js", "assets/chunk-5bcb444f.js", "assets/chunk-0e835458.js", "assets/chunk-e570733e.js", "assets/chunk-78c5b721.js", "assets/GameList.30b187ac.css", "assets/chunk-420c54b8.js", "assets/GameNavPath.e1cc4a4a.css", "assets/chunk-a21360ec.js", "assets/chunk-19b7f447.js", "assets/chunk-421da83a.js", "assets/GridScrollList.65d17988.css", "assets/GameRecommend.b27d187b.css", "assets/chunk-394d30c6.js", "assets/chunk-07977b38.js", "assets/chunk-0e1ef679.js", "assets/chunk-2d134749.js", "assets/chunk-7459b96e.js", "assets/index.page.bd276c74.css"]),
+            "/pages/providers/index.page.tsx": () => e(() =>
+                import ("./pages/providers/index.page.e91ca24d.js"), ["assets/pages/providers/index.page.e91ca24d.js", "assets/chunk-a4af42e8.js", "assets/chunk-73e80d68.js", "assets/chunk-2d134749.js", "assets/chunk-b53b00e3.js", "assets/chunk-cf010ec4.js", "assets/chunk-07977b38.js", "assets/chunk-0e835458.js", "assets/chunk-0e1ef679.js", "assets/chunk-1d6a2d71.js", "assets/chunk-421da83a.js", "assets/chunk-5bcb444f.js", "assets/GridScrollList.65d17988.css", "assets/chunk-394d30c6.js", "assets/chunk-420c54b8.js", "assets/GameNavPath.e1cc4a4a.css", "assets/index.659f9969.css"]),
+            "/pages/racing/index.page.tsx": () => e(() =>
+                import ("./pages/racing/index.page.42d9eb68.js"), ["assets/pages/racing/index.page.42d9eb68.js", "assets/chunk-a4af42e8.js", "assets/chunk-73e80d68.js", "assets/chunk-b53b00e3.js", "assets/chunk-cf010ec4.js", "assets/chunk-7459b96e.js", "assets/chunk-03c302ce.js", "assets/chunk-0e1ef679.js", "assets/index.page.7f150f41.css"]),
+            "/pages/recent/index.page.tsx": () => e(() =>
+                import ("./pages/recent/index.page.7765a687.js"), ["assets/pages/recent/index.page.7765a687.js", "assets/chunk-a4af42e8.js", "assets/chunk-73e80d68.js", "assets/chunk-19b7f447.js", "assets/chunk-7ea34fc4.js", "assets/chunk-b53b00e3.js", "assets/chunk-cf010ec4.js", "assets/chunk-78c5b721.js", "assets/chunk-5bcb444f.js", "assets/chunk-0e835458.js", "assets/GameList.30b187ac.css", "assets/chunk-420c54b8.js", "assets/GameNavPath.e1cc4a4a.css", "assets/chunk-a21360ec.js", "assets/chunk-421da83a.js", "assets/GridScrollList.65d17988.css", "assets/GameRecommend.b27d187b.css", "assets/index.405e4894.css", "assets/chunk-2d134749.js", "assets/chunk-07977b38.js", "assets/chunk-0e1ef679.js"]),
+            "/pages/setting/index.page.tsx": () => e(() =>
+                import ("./pages/setting/index.page.175952ad.js"), ["assets/pages/setting/index.page.175952ad.js", "assets/chunk-a4af42e8.js", "assets/chunk-73e80d68.js", "assets/chunk-654ef298.js", "assets/chunk-cf010ec4.js"]),
+            "/pages/sponsorship/index.page.tsx": () => e(() =>
+                import ("./pages/sponsorship/index.page.53230161.js"), ["assets/pages/sponsorship/index.page.53230161.js", "assets/chunk-a4af42e8.js", "assets/chunk-73e80d68.js", "assets/chunk-b53b00e3.js", "assets/chunk-cf010ec4.js", "assets/chunk-654ef298.js"]),
+            "/pages/sports/index.page.tsx": () => e(() =>
+                import ("./pages/sports/index.page.87af9965.js"), ["assets/pages/sports/index.page.87af9965.js", "assets/chunk-a4af42e8.js", "assets/chunk-73e80d68.js", "assets/chunk-b53b00e3.js", "assets/chunk-cf010ec4.js", "assets/chunk-7459b96e.js", "assets/chunk-b8efc996.js", "assets/chunk-03c302ce.js", "assets/chunk-0e1ef679.js", "assets/chunk-2d134749.js", "assets/chunk-07977b38.js", "assets/chunk-0e835458.js", "assets/chunk-27d137a6.js", "assets/index.page.6c077520.css"]),
+            "/pages/tagname/@tagName/index.page.tsx": () => e(() =>
+                import ("./pages/tagname/@tagName/index.page.5538eb47.js"), ["assets/pages/tagname/@tagName/index.page.5538eb47.js", "assets/chunk-a4af42e8.js", "assets/chunk-73e80d68.js", "assets/chunk-d4fa1232.js", "assets/chunk-b53b00e3.js", "assets/chunk-cf010ec4.js", "assets/chunk-5bcb444f.js", "assets/chunk-78c5b721.js", "assets/chunk-0e835458.js", "assets/GameList.30b187ac.css", "assets/chunk-19b7f447.js", "assets/chunk-8888a3c4.js", "assets/index.b6401c0d.css", "assets/chunk-5fced113.js", "assets/chunk-420c54b8.js", "assets/GameNavPath.e1cc4a4a.css", "assets/index.619a963f.css", "assets/chunk-2d134749.js", "assets/chunk-07977b38.js", "assets/chunk-0e1ef679.js", "assets/chunk-7459b96e.js"]),
+            "/pages/telegram/index.page.tsx": () => e(() =>
+                import ("./pages/telegram/index.page.8616d8e5.js"), ["assets/pages/telegram/index.page.8616d8e5.js", "assets/chunk-a4af42e8.js", "assets/chunk-73e80d68.js", "assets/chunk-b53b00e3.js", "assets/chunk-cf010ec4.js", "assets/index.page.434b03e9.css"]),
+            "/pages/themes/index.page.tsx": () => e(() =>
+                import ("./pages/themes/index.page.f471aa47.js"), ["assets/pages/themes/index.page.f471aa47.js", "assets/chunk-a4af42e8.js", "assets/chunk-73e80d68.js", "assets/chunk-2d134749.js", "assets/chunk-b53b00e3.js", "assets/chunk-cf010ec4.js", "assets/chunk-07977b38.js", "assets/chunk-0e835458.js", "assets/chunk-0e1ef679.js", "assets/chunk-3e48406a.js", "assets/chunk-421da83a.js", "assets/chunk-5bcb444f.js", "assets/GridScrollList.65d17988.css", "assets/chunk-420c54b8.js", "assets/GameNavPath.e1cc4a4a.css", "assets/index.5fdfe620.css"]),
+            "/pages/trading/contract/index.page.tsx": () => e(() =>
+                import ("./pages/trading/contract/index.page.32ee8463.js"), ["assets/pages/trading/contract/index.page.32ee8463.js", "assets/chunk-a4af42e8.js", "assets/chunk-73e80d68.js", "assets/chunk-ad4eb03c.js", "assets/chunk-654ef298.js", "assets/chunk-cf010ec4.js", "assets/remote.56f88e23.css"]),
+            "/pages/trading/index.page.tsx": () => e(() =>
+                import ("./pages/trading/index.page.af9b56fc.js"), ["assets/pages/trading/index.page.af9b56fc.js", "assets/chunk-a4af42e8.js", "assets/chunk-73e80d68.js", "assets/chunk-ad4eb03c.js", "assets/chunk-654ef298.js", "assets/chunk-cf010ec4.js", "assets/remote.56f88e23.css"]),
+            "/pages/trading/up-down/index.page.tsx": () => e(() =>
+                import ("./pages/trading/up-down/index.page.3c21e261.js"), ["assets/pages/trading/up-down/index.page.3c21e261.js", "assets/chunk-a4af42e8.js", "assets/chunk-73e80d68.js", "assets/chunk-ad4eb03c.js", "assets/chunk-654ef298.js", "assets/chunk-cf010ec4.js", "assets/remote.56f88e23.css"]),
+            "/pages/vip/index.page.tsx": () => e(() =>
+                import ("./pages/vip/index.page.cf8d4318.js"), ["assets/pages/vip/index.page.cf8d4318.js", "assets/chunk-a4af42e8.js", "assets/chunk-73e80d68.js", "assets/chunk-654ef298.js", "assets/chunk-cf010ec4.js", "assets/chunk-b53b00e3.js"]),
+            "/pages/wallet/index.page.tsx": () => e(() =>
+                import ("./pages/wallet/index.page.e747ae60.js"), ["assets/pages/wallet/index.page.e747ae60.js", "assets/chunk-a4af42e8.js", "assets/chunk-73e80d68.js", "assets/chunk-b894b9de.js", "assets/chunk-b53b00e3.js", "assets/chunk-cf010ec4.js", "assets/chunk-5bcb444f.js", "assets/chunk-357b411e.js", "assets/chunk-27d137a6.js", "assets/MatchIcon.8462f48e.css", "assets/chunk-03c302ce.js", "assets/chunk-0e1ef679.js", "assets/chunk-5fced113.js", "assets/chunk-0e835458.js", "assets/chunk-654ef298.js", "assets/chunk-35f3c0e2.js", "assets/chunk-c23b3c52.js", "assets/chunk-e570733e.js", "assets/chunk-68de7933.js", "assets/chunk-07977b38.js", "assets/chunk-47df8c47.js", "assets/chunk-3dc03e47.js", "assets/chunk-e20af49b.js", "assets/chunk-6e6e4b85.js", "assets/Emoji.5e52f519.css", "assets/chunk-b8efc996.js", "assets/chunk-000ed202.js", "assets/SearchWrap.82780ba6.css", "assets/chunk-78c5b721.js", "assets/GameList.30b187ac.css", "assets/index.8e819340.css", "assets/chunk-08fcab7b.js", "assets/index.page.ac1583c1.css"]),
+            "/renderer/_error.page.tsx": () => e(() =>
+                import ("./renderer/_error.page.95baf0b8.js"), ["assets/renderer/_error.page.95baf0b8.js", "assets/chunk-a4af42e8.js", "assets/chunk-73e80d68.js", "assets/chunk-b53b00e3.js", "assets/chunk-cf010ec4.js", "assets/_error.page.4bdaa919.css"])
+        }),
+        O = g({}, I);
+    i[".page"] = O;
+    const A = Object.assign({
+            "/renderer/_default.page.client.tsx": () => e(() =>
+                import ("./renderer/_default.page.client.7e3d4bf2.js").then(async _ => (await _.__tla, _)).then(_ => _._), ["assets/renderer/_default.page.client.7e3d4bf2.js", "assets/chunk-b53b00e3.js", "assets/chunk-cf010ec4.js", "assets/chunk-73e80d68.js", "assets/chunk-bad13a2b.js", "assets/chunk-a4af42e8.js", "assets/chunk-b894b9de.js", "assets/chunk-5bcb444f.js", "assets/chunk-357b411e.js", "assets/chunk-27d137a6.js", "assets/MatchIcon.8462f48e.css", "assets/chunk-03c302ce.js", "assets/chunk-0e1ef679.js", "assets/chunk-5fced113.js", "assets/chunk-0e835458.js", "assets/chunk-654ef298.js", "assets/chunk-35f3c0e2.js", "assets/chunk-c23b3c52.js", "assets/chunk-e570733e.js", "assets/chunk-68de7933.js", "assets/chunk-07977b38.js", "assets/chunk-47df8c47.js", "assets/chunk-3dc03e47.js", "assets/chunk-e20af49b.js", "assets/chunk-6e6e4b85.js", "assets/Emoji.5e52f519.css", "assets/chunk-b8efc996.js", "assets/chunk-000ed202.js", "assets/SearchWrap.82780ba6.css", "assets/chunk-78c5b721.js", "assets/GameList.30b187ac.css", "assets/index.8e819340.css", "assets/chunk-2d134749.js", "assets/chunk-21fa96d0.js", "assets/PostComment.9afc074a.css", "assets/chunk-f0854543.js", "assets/pages/help/index.page.a21ea3c9.js", "assets/chunk-7459b96e.js", "assets/chunk-6d8ed563.js", "assets/GroupPageLayout.6f234913.css", "assets/chunk-1371f12f.js", "assets/chunk-08fcab7b.js", "assets/_default.page.client.b2a76853.css"])
+        }),
+        T = g({}, A);
+    i[".page.client"] = T;
+    const u = Object.freeze(Object.defineProperty({
+        __proto__: null,
+        isGeneratedFile: !0,
+        neverLoaded: L,
+        pageFilesEager: a,
+        pageFilesExportNamesEager: c,
+        pageFilesExportNamesLazy: t,
+        pageFilesLazy: i,
+        pageFilesList: R
+    }, Symbol.toStringTag, {
+        value: "Module"
+    }));
+    b(u);
+
+    function P(_) {
+        return m(_.isHydration === !0), m(_.isBackwardNavigation === null), F(_)
+    }
+    const d = l({
+        withoutHash: !0
+    });
+    async function D() {
+        const _ = H();
+        return r(_, {
+            isHydration: !0,
+            isBackwardNavigation: null
+        }), r(_, await f(_._pageId)), V(), P(_)
+    }
+
+    function V() {
+        const _ = l({
+            withoutHash: !0
+        });
+        j(d === _, `URL manipulated before hydration finished (\`${d}\` to \`${_}\`). Ensure the hydration finishes with \`onHydrationEnd()\` before manipulating the URL.`)
+    }
+    async function f(_) {
+        const p = {},
+            {
+                pageFilesAll: s
+            } = await z(!0);
+        return r(p, {
+            _pageFilesAll: s
+        }), r(p, await B(s, _)), s.filter(n => n.fileType !== ".page.server").forEach(n => {
+            var o;
+            N(!(!((o = n.fileExports) === null || o === void 0) && o.onBeforeRender), `\`export { onBeforeRender }\` of ${n.filePath} is loaded in the browser but never executed (because you are using Server-side Routing). In order to reduce the size of you browser-side JavaScript, define \`onBeforeRender()\` in \`.page.server.js\` instead. See https://vite-plugin-ssr.com/onBeforeRender-isomorphic#server-routing`, {
+                showStackTrace: !1,
+                onlyOnce: !0
+            })
+        }), p
+    }
+    S(), h();
+    async function h() {
+        var _, p;
+        const s = await D();
+        k(s), await s.exports.render(s), U(s, "onHydrationEnd"), await ((p = (_ = s.exports).onHydrationEnd) === null || p === void 0 ? void 0 : p.call(_, s))
+    }
+})();

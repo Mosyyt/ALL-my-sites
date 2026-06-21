@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   
+</head>
+
+<style>
+
+</style>
+
+<body>
+ 
+    <h1>garden</h1>
+    <div class="img"><img id="1" src=""></img></div>
+    <div class="n"><button onclick="next()">next</button></div>
+    <div class="a"><button onclick="back()">back</button></div>
+    <p id="image"></p>
+    <button onclick="add()">add</button>
+
+    <script>
+        const img = ["img/garden.jpeg", "img/garden2.PNG"]
+        var i = 0
+       const img3 =  document.getElementById("1")
+
+       img3.setAttribute("src",img[i])
+        function next(){
+            if (i==(img.length-1))
+            {i=0}
+            else
+            {i+=1}
+            img3.setAttribute("src",img[i])
+        }
+        function back(){
+            if (i==0)
+            {i=img.length-1}
+            else
+            {i-=1}
+            img3.setAttribute("src", img[i])
+        }
+        function add(){
+            const img2 = document.createElement("img")
+            img2.setAttribute("src", "img/garden.jpeg")
+            img2.setAttribute("class", "append")
+            document.getElementById("image").appendChild(img2)
+
+        }
+    </script>
+ 
+</body>
+
+</html>

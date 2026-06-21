@@ -1,0 +1,48 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+    padding: 20px;
+}
+
+h1,
+h2 {
+    text-align: center;
+}
+
+#roms-container,
+#games-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.console,
+.game {
+    background-color: #fff;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+}
+
+.console a,
+.game a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+.console a:hover,
+.game a:hover {
+    text-decoration: underline;
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ROMs Vault</title>
+    <link rel="stylesheet" href="rom.css">
+</head>
+<body>
+    <h1>ROMs Vault</h1>
+    <div id="roms-container"></div>
+    <script>
+        async function loadConsoles() {
+            try {
+                const response = await fetch('/roms');
+                const data = await response.json();
+                const romsContainer = document.getElementById('roms-container');
+                romsContainer.innerHTML = '';
+                data.consoles.forEach(console => {
+                    const div = document.createElement('div');
+                    div.className = 'console';
+                    div.innerHTML = `<a href="/consoleinfo?console=${console.url}">${console.console} (${console.year})</a>`;
+                    romsContainer.appendChild(div);
+                });
+            } catch (error) {
+                console.error('Error loading consoles:', error);
+            }
+        }
+
+        loadConsoles();
+    </script>
+</body>
+</html>

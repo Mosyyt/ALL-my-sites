@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Download</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .game-info,
+        .game-image,
+        .game-box-art {
+            margin-bottom: 20px;
+        }
+
+        .sidebarContainer,
+        .sidebarUnit {
+            display: none;
+            /* Hiding the sidebar elements as they are not implemented */
+        }
+
+        .mainContent {
+            order: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1 id="game-title">Game Title</h1>
+        <div class="game-info">
+            <div id="game-description">Description: </div>
+            <div id="game-year">Year: </div>
+            <div id="game-players">Players: </div>
+            <div id="game-region">Region: </div>
+            <div id="game-publisher">Publisher: </div>
+            <div id="game-serial">Serial #: </div>
+        </div>
+        <div class="game-image">
+            <h3>Screenshot</h3>
+            <img id="game-image" src="" alt="Game Image" style="max-width: 100%;">
+        </div>
+        <div class="game-box-art">
+            <h3>Box Art</h3>
+            <img id="game-box-art" src="" alt="Box Art" style="max-width: 100%;">
+        </div>
+        <div>
+            <h3>Download</h3>
+            <form id="download-form" action="" method="POST">
+                <input type="hidden" name="mediaId" value="">
+                <button type="submit">Download</button>
+            </form>
+            <div id="download-size"></div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", async function () {
+            const urlParams = new URLSearchParams(window.location.search);
+            const gameId = urlParams.get('id');
+
+            try {
+                const response = await fetch(`/romdownload/${gameId}`);
+                if (!response.ok) {
+                    throw new Error('Error fetching data');
+                }
+                const game = await response.json();
+
+                document.getElementById('game-title').innerText = game.title;
+                document.getElementById('game-description').innerText = `Description: ${game.description}`;
+                document.getElementById('game-year').innerText = `Year: ${game.year}`;
+                document.getElementById('game-players').innerText = `Players: ${game.players}`;
+                document.getElementById('game-region').innerText = `Region: ${game.region}`;
+                document.getElementById('game-publisher').innerText = `Publisher: ${game.publisher}`;
+                document.getElementById('game-serial').innerText = `Serial #: ${game.serial}`;
+                document.getElementById('game-image').src = game.image;
+                document.getElementById('game-box-art').src = game.boxArt;
+                document.getElementById('download-form').action = game.downloadUrl;
+                document.getElementById('download-size').innerText = game.downloadSize;
+                document.querySelector('input[name="mediaId"]').value = game.mediaId;
+            } catch (error) {
+                console.error('Error loading game data:', error);
+                document.getElementById('game-title').innerText = 'Error loading game data';
+            }
+        });
+    </script>
+</body>
+
+</html>

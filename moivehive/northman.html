@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <script src="https://kit.fontawesome.com/29254b01ee.js" crossorigin="anonymous"></script>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-C96TQY7KGP"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-C96TQY7KGP');
+  </script>
+  <!-- Favicons -->
+  <link rel="apple-touch-icon" sizes="180x180" href="images/ks.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/ks.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/ks.png">
+
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="index, follow">
+  <meta property="og:image" content="images/ks.png" />
+  <meta name="description"
+    content="Discover and stream your favorite movies and TV shows with softwreak - an open source content search and watch website. Enjoy unlimited access to a vast library of content for free.">
+  <title>MovieHive</title>
+  <!-- Primary Meta Tags -->
+  <title>MovieHive | Movies for free no ads</title>
+  <meta name="title" content="MovieHive | Movies for free no ads">
+  <meta name="description" content="The only free movie streaming site with no ads...">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="http://moviehive.lol/">
+  <meta property="og:title" content="MovieHive | Movies for free no ads">
+  <meta property="og:description" content="The only free movie streaming site with no ads...">
+  <meta property="og:image" content="">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="http://moviehive.lol/">
+  <meta property="twitter:title" content="MovieHive | Movies for free no ads">
+  <meta property="twitter:description" content="The only free movie streaming site with no ads...">
+  <meta property="twitter:image" content="">
+
+  <link rel="stylesheet" href="other.css">
+  <script async src="jquery.js"></script>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9239308800995141"
+  crossorigin="anonymous"></script>
+  <!-- Serviceworker code for PWA  -->
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function () {
+        navigator.serviceWorker.register('sw.js').then(function (registration) {
+          console.log('Service worker registered: ', registration.scope);
+        }).catch(function (error) {
+          console.log('Service worker registration failed: ', error);
+        });
+      });
+    }
+  </script>
+</head>
+
+<body class="bodytop">
+    <header class="header" data-header>
+        <div class="container">
+    
+          <div class="overlay" data-overlay></div>
+    
+          <a href="./index.html" class="logo">
+            <div class="display">
+              <img class="title" src="ks.png">
+            </div>
+          </a>
+    
+          <div class="header-actions">
+    
+            <button class="search-btn">
+              <ion-icon name="search-outline"></ion-icon>
+            </button>
+    
+            <div class="lang-wrapper">
+              <label for="language">
+                <ion-icon name="globe-outline"></ion-icon>
+              </label>
+    
+              <select name="language" id="language">
+                <option value="en">EN</option>
+              
+              </select>
+            </div>
+    
+           
+    
+          </div>
+    
+          <button class="menu-open-btn" data-menu-open-btn>
+            <ion-icon name="reorder-two"></ion-icon>
+          </button>
+    
+          <nav class="navbar" data-navbar>
+    
+            <div class="navbar-top">
+    
+              <a href="./index.html" class="logo">
+                <img src="./assets/images/logo.svg" alt="Filmlane logo">
+              </a>
+    
+              <button class="menu-close-btn" data-menu-close-btn>
+                <ion-icon name="close-outline"></ion-icon>
+              </button>
+    
+            </div>
+    
+            <ul class="navbar-list">
+    
+              <li>
+                <a href="./index.html" class="navbar-link">Home</a>
+              </li>
+    
+              <li>
+                <a href="#" class="navbar-link">Movie</a>
+              </li>
+    
+              <li>
+                <a href="#" class="navbar-link">Tv Show</a>
+              </li>
+    
+              <li>
+                <a href="#" class="navbar-link">Web Series</a>
+              </li>
+    
+              <li>
+                <a href="pricing.html" class="navbar-link">Pricing</a>
+              </li>
+    
+            </ul>
+    
+            <ul class="navbar-social-list">
+    
+              <li>
+                <a href="#" class="navbar-social-link">
+                  <ion-icon name="logo-twitter"></ion-icon>
+                </a>
+              </li>
+    
+              <li>
+                <a href="#" class="navbar-social-link">
+                  <ion-icon name="logo-facebook"></ion-icon>
+                </a>
+              </li>
+    
+              <li>
+                <a href="#" class="navbar-social-link">
+                  <ion-icon name="logo-pinterest"></ion-icon>
+                </a>
+              </li>
+    
+              <li>
+                <a href="#" class="navbar-social-link">
+                  <ion-icon name="logo-instagram"></ion-icon>
+                </a>
+              </li>
+    
+              <li>
+                <a href="#" class="navbar-social-link">
+                  <ion-icon name="logo-youtube"></ion-icon>
+                </a>
+              </li>
+    
+            </ul>
+    
+          </nav>
+    
+        </div>
+      </header>
+  
+  <div class="content">
+   
+    <div class="popuplar">
+        <div class="search-container">
+            
+            
+          </div>
+          <center>
+            <div id="video" class="video">
+              <iframe id="iframe" src="" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+              <p style="color: rgb(194, 236, 78); font-weight: 500;">On behalf of MovieHive we hope you enjoy your movie.</p>
+              <!-- Go to www.addthis.com/dashboard to customize your tools -->
+        
+              <p style="color: rgb(79, 221, 221); font-weight: 500;">In case of any Error or Too Much Buffering click again on
+                your Movie poster down below or just change the Server from the left corner in video player. </p>
+               
+              <div id="webSeriesData"></div>
+            </div>
+        </center>
+    </div>
+    <div id="results"></div>
+
+  </div>
+  <div id="results"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/pace-js@latest/pace.min.js"></script>
+  <script src="script.min.js"></script>
+
+
+</body>
+
+</html>

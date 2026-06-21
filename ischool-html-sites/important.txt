@@ -1,0 +1,7 @@
+CSS Margin, padding, Border
+https://blog.hubspot.com/website/css-margin-vs-padding
+https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Box_Model
+CSS positioning 
+https://developer.mozilla.org/en-US/docs/Web/CSS/float
+https://www.w3schools.com/howto/howto_css_clearfix.asp
+https://www.w3schools.com/css/css_float_examples.asp (important!)

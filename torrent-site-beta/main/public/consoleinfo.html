@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Console Info</title>
+    <link rel="stylesheet" href="/assets/consoleinfo.css">
+</head>
+
+<body>
+    <button onclick="goBack()">Back to Consoles</button>
+    <h1 id="console-title"></h1>
+    <div id="games-list"></div>
+    <script>
+        function getQueryParam(param) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(param);
+        }
+
+        function goBack() {
+            window.history.back();
+        }
+
+        async function loadGames() {
+            const consoleUrl = getQueryParam('console');
+            const consoleName = consoleUrl.split('/').pop();
+            document.getElementById('console-title').textContent = `${consoleName} Games`;
+
+            try {
+                const response = await fetch(`/roms/${consoleName}`);
+                const data = await response.json();
+                const gamesList = document.getElementById('games-list');
+                gamesList.innerHTML = '';
+                data.games.forEach(game => {
+                    const div = document.createElement('div');
+                    div.className = 'game';
+                    div.innerHTML = `<a href="${game.gameUrl}">${game.title}</a> - ${game.region} - ${game.version} - ${game.languages} - ${game.rating}`;
+                    gamesList.appendChild(div);
+                });
+            } catch (error) {
+                console.error('Error loading games:', error);
+                document.getElementById('games-list').innerHTML = 'Error loading games';
+            }
+        }
+
+        loadGames();
+    </script>
+</body>
+
+</html>
